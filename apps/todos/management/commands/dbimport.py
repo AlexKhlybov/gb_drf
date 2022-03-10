@@ -7,6 +7,7 @@ from django.core.management import BaseCommand
 from import_export import resources
 
 from apps.users.models import User
+from apps.todos.models import Project, Todo
 
 
 class Command(BaseCommand):
@@ -15,7 +16,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         models = [
-            User,
+            User, Project, Todo
         ]
 
         for i in models:

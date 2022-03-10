@@ -5,6 +5,7 @@ from django.conf import settings
 from django.core.management import BaseCommand
 
 from apps.users.admin import UserResource
+from apps.todos.admin import ProjectResource, TodoResource
 
 
 class Command(BaseCommand):
@@ -13,7 +14,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         resource = [
-            UserResource,
+            UserResource, ProjectResource, TodoResource
         ]
 
         for i in resource:
