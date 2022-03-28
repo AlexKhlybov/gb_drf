@@ -18,6 +18,7 @@
 - изменение одной задачи
 - удаление задачи
 
+
 ## Зависимости (requirements)
 ```
 django<4
@@ -25,6 +26,7 @@ django<4
 black==21.6b0
 isort==5.9.1
 ```
+
 
 ## Установка и локальный запуск
 Клонируем:
@@ -44,32 +46,9 @@ $ source env/bin/activate  # use `env\Scripts\activate` on Windows
 $ pip install -r requirements.txt
 ```
 
-## RESTful interactions
-Используйте [Swagger UI](https://swagger.io/tools/swagger-ui/) или [cUrl](https://curl.se/) для манипуляции с задачами. Ниже приведен пример использования утилиты cUrl:
-
-**(GET) Получить список задач**
+Запускаем приложение:
 ```
-curl -H 'Content-Type: application/json' -X 'GET' 'http://127.0.0.1:8000/api/task/'
-```
-
-**(GET) Получить конкретную задачу**
-```
-curl -H 'Content-Type: application/json' -X 'GET' 'http://127.0.0.1:8000/api/task/<ID>'
-```
-
-**(POST) Создать задачу**
-```
-curl -H 'Content-Type: application/json' -d '{"title":"Dinner", "content":"Having Dinner"}' -X 'POST' 'http://127.0.0.1:8000/api/task/'
-```
-
-**(UPDATE) Обновить задачу**
-```
-curl -H 'Content-Type: application/json' -d '{"title":"Dinner", "content":"Having Dinner"}' -X 'PUT' 'http://127.0.0.1:8000/api/task/<ID>'
-```
-
-**(DELETE) Удалить задачу**
-```
-curl -H 'Content-Type: application/json' -X 'DELETE' 'http://127.0.0.1:8000/api/task/<ID>'
+$ make run
 ```
 
 
@@ -87,3 +66,4 @@ OK
 
 ## Лицензия
 MIT
+
